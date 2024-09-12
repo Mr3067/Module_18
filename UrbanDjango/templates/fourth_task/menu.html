@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block pagename %}
+    <meta charset="UTF-8">
+    <title>task3.</title>
+    <link rel = 'stylesheet' type="text/css" href="{% static 'style.css' %}">
+    {% endblock %}
+</head>
+<body>
+{% block menu %}
+<h2><a href='/'> Главная </a></h2>
+<h2><a href='/shop'> Магазин </a></h2>
+<h2><a href='/recycle'> Корзина </a></h2>
+<h2><a href='/'> <button>Вернуться обратно </button></a></h2>
+{% endblock %}
+
+{% block content  %}
+<h1>место для вашей рекламы - контент страницы</h1>
+{% endblock %}
+
+</body>
+</html>
