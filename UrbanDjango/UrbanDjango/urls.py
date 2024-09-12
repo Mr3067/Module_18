@@ -22,5 +22,6 @@ from django.views.generic import TemplateView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('class/', index),
-    path('func/', index2.as_view()),
+    # path('func/', index2.as_view()),
+    path('func/', TemplateView.as_view(template_name='func_view.html'))
 ]

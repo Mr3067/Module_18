@@ -9,5 +9,5 @@ def index(request):
     return render(request,'class_view.html')
 
 
-class index2(TemplateView):
-    template_name = 'func_view.html'
+# class index2(TemplateView):
+#     template_name = 'func_view.html'
