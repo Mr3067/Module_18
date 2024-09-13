@@ -1,0 +1,23 @@
+{% extends 'fifth_task\registration_page.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        {% block pagename %}
+        {{ block.super }}
+        <h1>Выберите способ регистрации</h1>
+        {% endblock %}
+</head>
+
+<body>
+        {% block reg_form %}
+            <h2><a href='/'> Главная </a></h2>
+            <h2><a href='/html_form'> Регистрация через html </a></h2>
+            <h2><a href='/dj_form'> Регистрация через Django </a></h2>
+        {% endblock %}
+
+        {% block content  %}
+        {{ block.super }}
+        {% endblock %}
+</body>
+
+</html>

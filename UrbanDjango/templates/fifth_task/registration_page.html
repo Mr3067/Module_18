@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block pagename %}
+    <meta charset="UTF-8">
+    <title>Форма ввода</title>
+    <link rel = 'stylesheet' type="text/css" href="{% static 'style.css' %}">
+    {% endblock %}
+</head>
+<body>
+    {% block reg_form %}
+        <form method="post">
+            {% csrf_token %}
+            <label for="username"> Введите логин: </label>
+            <input type="text" id = "username" name="username" maxlength="30" required>
+
+            <label for="password"> Введите пароль: </label>
+            <input type="text" id = "password" name="password" minlength="8" required>
+
+            <label for="repeat_password"> Повторите пароль: </label>
+            <input type="text" id = "repeat_password" name="repeat_password" minlength="8" required>
+
+            <label for="age"> Введите возраст: </label>
+            <input type="number" id = "age" name="age" maxlength="3" required>
+
+            <button type="submit">Отправить</button>
+
+        </form>
+    {% endblock %}
+
+{% block content  %}
+    <h1>место для вашей рекламы - контент страницы</h1>
+
+{% endblock %}
+
+</body>
+</html>

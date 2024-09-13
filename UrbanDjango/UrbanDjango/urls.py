@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from task4.views import *
+from task5.views import *
 from django.views.generic import TemplateView
 
 urlpatterns = [
@@ -31,9 +31,8 @@ urlpatterns = [
     # path('shop/', TemplateView.as_view(template_name=r'fourth_task\task4_depend1.html')),
     # path('recycle/', TemplateView.as_view(template_name=r'fourth_task\task4_depend2.html'))
 
-    path('', task4_main),
-    path('shop/', task4_depend1),
-    path('recycle/', task4_depend2)
-
+    path('html_form/', sign_up_by_html),
+    path('dj_form/', sign_up_by_django),
+    path('', choose)
 
 ]

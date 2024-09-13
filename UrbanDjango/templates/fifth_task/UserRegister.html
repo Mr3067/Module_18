@@ -1,0 +1,25 @@
+{% extends 'fifth_task\registration_page.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        {% block pagename %}
+        {{ block.super }}
+        <h1>Наследованная форма</h1>
+        {% endblock %}
+</head>
+
+<body>
+        {% block reg_form %}
+        {{ block.super }}
+        {% endblock %}
+
+        {% block content  %}
+        {{ block.super }}
+        <h3>___________________</h3>
+        <h3>контрольный список пользователей </h3>
+        <h3>{{ list }}</h3>
+
+        {% endblock %}
+</body>
+
+</html>
